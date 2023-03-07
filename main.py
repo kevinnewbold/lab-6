@@ -15,9 +15,14 @@ def encode(password):
     return int(encoded)
 
 
+# decode function added
 def decode(password):
-    decoded = password
-    return decoded
+    string = str(password)
+    decoded = ""
+    for c in string:
+        decoded += str(((int(c) + 10) - 3) % 10)
+    return int(decoded)
+
 
 # Main function with while loop
 def main():
@@ -34,9 +39,6 @@ def main():
             print(f"The encoded password is {password} and the original password is {decode(password)}")
         elif option == 3:
             break
-
-
-
 
 
 if __name__ == "__main__":
