@@ -1,3 +1,4 @@
+# Print function
 def print_menu():
     print("Menu")
     print("-------------")
@@ -18,7 +19,7 @@ def decode(password):
     decoded = password
     return decoded
 
-
+# Main function with while loop
 def main():
     password = 0
     while True:
